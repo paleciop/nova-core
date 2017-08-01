@@ -1,9 +1,9 @@
 'use strict';
 
-const initContextProcessorEngine = require('./lib/contextProcessorEngine');
+const fetchContextProcessorEngine = require('./lib/fetchContextProcessorEngine');
 const contextProcessor = require('./lib/contextProcessor');
 
 module.exports = {
-  initContextProcessorEngine,
+  fetchContextProcessorEngine,
   contextProcessor
 };
