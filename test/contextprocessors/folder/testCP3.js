@@ -4,8 +4,9 @@ const contextProcessor = require('../../../index').contextProcessor;
 
 module.exports = contextProcessor.extend({
   categories: ['test'],
+  priority: 60,
   name: 'Text ContextProcessor 3',
   process (contentModel) {
-    contentModel.test3 = 'Test Property! 3';
+    contentModel.test3 = 'Test Property! 3 First';
   }
 });
