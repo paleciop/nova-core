@@ -4,7 +4,12 @@ console.log('>>>> Testing Nova Core.');
 const nova = require('../index');
 const fsPromised = require('../lib/fsPromised');
 
-nova.fetchContextProcessorEngine({paths: ['test/contextprocessors']}).then(contextProcessorEngine => console.log(contextProcessorEngine.execute('test', {})));
+async function test () {
+  const cpe = await nova.fetchContextProcessorEngine({paths: ['test/contextprocessors']});
+  cpe.execute('test', {}).then(contentModel => console.log('Content Model: ', contentModel));
+
+}
+test();
 
 /*
 fsPromised.walkFiles('./test/contextprocessors').then(files => console.log(files));
