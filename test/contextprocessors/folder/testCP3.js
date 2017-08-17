@@ -7,12 +7,12 @@ const contextProcessor = require('../../../index').contextProcessor;
 
 module.exports = contextProcessor.extend({
   categories: ['test'],
-  priority: 60,
-  name: 'Text ContextProcessor 3',
+  priority: 70,
+  name: 'Test ContextProcessor 3',
   process (contentModel) {
     console.log('Wait a sec');
     return setTimeoutPromise(100, 'foobar').then((value) => {
-      contentModel.test = 'Test Property! 3 First';
+      contentModel.test3 = 'Test Property! 3 First';
       console.log('Waited!');
     });
   }
