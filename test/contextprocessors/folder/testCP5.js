@@ -6,7 +6,7 @@ const setTimeoutPromise = util.promisify(setTimeout);
 
 module.exports = contextProcessor.extend({
   categories: ['test'],
-  priority: 60,
+  priority: 70,
   name: 'Test ContextProcessor 5',
   process (contentModel) {
     return setTimeoutPromise(1000).then(() => {
