@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "jsdoc": "./node_modules/.bin/jsdoc lib -r",
-    "jsdoc2md": "./node_modules/.bin/jsdoc2md --files lib/*.js > api.md --configure jsdoc.json"
+    "jsdoc2md": "./node_modules/.bin/jsdoc2md --files lib/*.js > doc/api.md --configure jsdoc.json"
   },
   "keywords": [
     "nova",
