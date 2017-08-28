@@ -1167,7 +1167,7 @@ handlebars@3.0.3:
   optionalDependencies:
     uglify-js "~2.3"
 
-handlebars@^4.0.3:
+handlebars@^4.0.10, handlebars@^4.0.3:
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.10.tgz#3d30c718b09a3d96f23ea4cc1f403c4d3ba9ff4f"
   dependencies:
