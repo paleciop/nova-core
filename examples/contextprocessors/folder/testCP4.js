@@ -6,7 +6,7 @@ module.exports = contextProcessor.extend({
   categories: ['tests'],
   priority: 30,
   name: 'Test ContextProcessor 4',
-  process (contentModel) {
+  process (executionContext, contentModel) {
     contentModel.test4 = 'Test Property 4!';
   }
 });

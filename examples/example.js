@@ -8,7 +8,7 @@ const templatingEngine = nova.templatingEngine;
 
 async function test () {
   const cpe = await nova.fetchContextProcessorEngine({paths: ['examples/contextprocessors']});
-  cpe.execute('test', {}).then(contentModel => {
+  cpe.execute({path: "/api/docs/testname"}, {}).then(contentModel => {
     console.log('Content Model: ', contentModel);
     const html = `<!DOCTYPE html>
         <html lang="en">

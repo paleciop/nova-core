@@ -8,7 +8,7 @@ module.exports = contextProcessor.extend({
   categories: ['test'],
   priority: 70,
   name: 'Test ContextProcessor 5',
-  process (contentModel) {
+  process (executionContext, contentModel) {
     return setTimeoutPromise(1000).then(() => {
       contentModel.test5 = 'Test Property! 5';
     });

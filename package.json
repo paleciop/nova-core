@@ -30,6 +30,7 @@
   "dependencies": {
     "fs-extra": "^4.0.0",
     "handlebars": "^4.0.10",
-    "klaw": "^2.0.0"
+    "klaw": "^2.0.0",
+    "route-pattern": "^0.0.6"
   }
 }
