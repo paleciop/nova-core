@@ -7,8 +7,10 @@ const fsPromised = require('../lib/fsPromised');
 const templatingEngine = nova.templatingEngine;
 
 async function test () {
-  const cpe = await nova.fetchContextProcessorEngine({paths: ['examples/contextprocessors']});
-  cpe.execute({path: "/api/docs/testname"}, {}).then(contentModel => {
+  const cpe = await nova.fetchContextProcessorEngine({paths: ['./contextprocessors']});
+  const originalContentModel = {original: true};
+  console.log('Input Content Model', originalContentModel);
+  cpe.execute({path: "/api/docs/testname"}, originalContentModel).then(contentModel => {
     console.log('Content Model: ', contentModel);
     const html = `<!DOCTYPE html>
         <html lang="en">
@@ -23,7 +25,7 @@ async function test () {
             <p>Test5: {%test5%}</p>
         </body>
         </html>`;
-    console.log(templatingEngine.compileTemplate(html, contentModel))
+    console.log('Output Content Model', contentModel);
   });
 
 }
