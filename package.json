@@ -1,7 +1,7 @@
 {
   "name": "nova-core",
   "version": "1.0.0",
-  "description": "Small templating framework that decouples the presentation layer with the business logic. Based on XumaK's Danta specification.",
+  "description": "Small framework for creating web APIs. Based on XumaK's Danta specification.",
   "main": "index.js",
   "engines": {
     "node": ">=12.11.0",
