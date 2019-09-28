@@ -2,8 +2,8 @@
 
 const fetchContextProcessorEngine = require('./lib/fetchContextProcessorEngine');
 const templatingEngine = require('./lib/templatingEngine');
-const contextProcessor = require('./lib/contextProcessor');
-const pathAwareContextProcessor = require('./lib/pathAwareContextProcessor');
+const contextProcessor = require('./lib/context-processors/contextProcessor');
+const pathAwareContextProcessor = require('./lib/context-processors/pathAwareContextProcessor');
 
 module.exports = {
   fetchContextProcessorEngine,
