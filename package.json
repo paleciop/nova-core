@@ -36,7 +36,7 @@
     "jsdoc": "^3.5.4",
     "jsdoc-babel": "^0.3.0",
     "jsdoc-to-markdown": "^3.0.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.5.3"
   },
   "dependencies": {
     "handlebars": "^4.3.4",

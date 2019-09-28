@@ -4,9 +4,9 @@ const contextProcessor = require('../../index').pathAwareContextProcessor;
 
 module.exports = contextProcessor.extend({
   patterns: ["/api/document/*", "/api/docs/testname"],
-  priority: 40,
-  name: 'CP1 40',
+  name: 'CP5 50',
+  priority: 50,
   process (executionContext, contentModel) {
-    contentModel.test2 = 'Path CP Property45';
+    contentModel.test2 = 'Path CP Property4';
   }
 });
