@@ -9,7 +9,7 @@ async function test () {
   console.log('Input Content Model', originalContentModel);
   cpe.execute({path: "/api/docs/testname"}, originalContentModel).then(contentModel => {
     console.log('Content Model: ', JSON.stringify(contentModel, null, 2));
-  });
+  }).catch(e => console.error('The error is: >>>>>', e));
 
 }
 test();

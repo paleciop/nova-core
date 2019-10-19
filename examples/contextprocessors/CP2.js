@@ -8,5 +8,7 @@ module.exports = contextProcessor.extend({
   name: 'CP2 60',
   process (executionContext, contentModel) {
     contentModel.test2 = 'Path CP Property2';
+
+    return Promise.resolve('hello');
   }
 });

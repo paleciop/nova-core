@@ -19,6 +19,7 @@ npm run jsdoc2md
 ## TODO
 - Comment
 - Tests
+- Testing framework
 - Error handling
 - Example
 - Error when path doesn't exist
