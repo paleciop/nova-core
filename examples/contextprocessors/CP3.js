@@ -8,8 +8,9 @@ module.exports = contextProcessor.extend({
   name: 'CP3 50',
   priority: 50,
   process (executionContext, contentModel) {
+    console.log('CP3 start');
     contentModel.test = 'CP3';
     //throw new Warning('Whoa!');
-    return Promise.resolve('hello 3');
+    return Promise.resolve('hello 3').then(a => console.log('CP3 end') || a);
   }
 });

@@ -8,12 +8,9 @@ module.exports = contextProcessor.extend({
   priority: 40,
   name: 'CP1 40',
   process (executionContext, contentModel) {
-    throw new NonFatalError('CP111111!!!!')
-
-
+    console.log('CP1 start');
+    //throw new NonFatalError('CP111111!!!!')
     contentModel.test2 = 'Path CP Property45';
-    return Promise.resolve('CP1!').then(a => {
-      throw new NonFatalError('CP1!!!!')
-    });
+    return Promise.resolve('CP1!').then(a => console.log('CP1 end') || a);
   }
 });
