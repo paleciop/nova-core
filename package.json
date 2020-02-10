@@ -8,7 +8,7 @@
     "npm": ">=6.11.3"
   },
   "scripts": {
-    "example": "node examples/example.js",
+    "example": "node example",
     "test": "",
     "jsdoc": "./node_modules/.bin/jsdoc lib -r",
     "jsdoc2md": "./node_modules/.bin/jsdoc2md --files lib/*.js > doc/api.md --configure jsdoc.json"
