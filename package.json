@@ -1,5 +1,5 @@
 {
-  "name": "nova-core",
+  "name": "@palecio/nova-core",
   "version": "1.0.0",
   "description": "Small framework for creating web APIs. Based on XumaK's Danta specification.",
   "main": "index.js",

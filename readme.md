@@ -14,26 +14,26 @@ Some of the improvements Nova has over Danta are:
 ## Install
 
 ```javascript
-npm install nova-core
+npm install @palecio/nova-core
 ```
 
 ## Hello World
 
 ```javascript
-const nova = require('../index');
+const nova = require('@palecio/nova-core'); // import framework
 
 nova
-  .fetchContextProcessorEngine({
-    contextProcessors: {
+  .fetchContextProcessorEngine({ // get a promise that when resolved will return the context processor engine
+    contextProcessors: { // the context processor object, can be a single object or an array of objects
       name: 'HelloWorld',
       categories: 'hw',
-      process(ec, cm) {
+      process(ec, cm) { // this is where the context processor logic goes
         cm.greeting = 'Hello World';
       }
     }
   })
-  .then(cpe => cpe.execute({ categories: 'hw' }, {}))
-  .then(contentModel => console.log('Content Model:', contentModel));
+  .then(cpe => cpe.execute({ categories: 'hw' }, {})) // the execute() method receives an execution context and an initial content model
+  .then(contentModel => console.log('Content Model:', contentModel)); // get the resulting content model
 ```
 
 ## Context Processors
