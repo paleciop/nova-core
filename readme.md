@@ -2,6 +2,15 @@
 
 Nova is a JavaScript framework based on XumaK's [Danta](https://github.com/DantaFramework). It provides a mechanism where the business logic is constructed as modular, granular and reusable pieces called Context Processors, has a simple and clear API which is independent from any particular technology and allows to easily test the logic either piece by piece or several pieces in conjunction.
 
+## Motivation
+Even though XumaK's Danta solved many development problems for content management applications of the time,
+it still had some areas of improvement. Nova addresses some of these problems _and_ it's written in JavaScript!
+Some of the improvements Nova has over Danta are:
+
+- Parallel Context Processor execution
+- Context Processors can be simple JavaScript objects, reducing overhead and boilerplate code
+- Danta was oriented towards Content Management applications while Nova can be used to create pretty much anything (especially web APIs).
+
 ## Install
 
 ```javascript
@@ -54,4 +63,5 @@ node run example
 npm test
 ```
 
-
+---
+**Author: Pablo Alecio (paleciop@gmail.com)**
