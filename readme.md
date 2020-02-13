@@ -37,17 +37,19 @@ set in a lower Context Processor won’t be available in Context Processors abov
 In this way, each processing level adds to the one before and creates unique variables that are available after but won’t conflict with other Context Processor scopes or its children.
 Context Processors are meant to be very small and lightweight. They do the least amount of processing needed and rely on following Context Processors to modify their result (if required) into something appropriate.
 
+### Context Processor Flow Example
+![Context Processor Diagram](./docs/img/NovaContextProcessorExample.jpg)
+
 ### Anatomy of a Context Processor
 
-![Anatomy of a Context Processor](./docs/context-processor-anatomy.png")
-
+![Anatomy of a Context Processor](./docs/img/context-processor-anatomy.png)
 
 ## Run example
 ```bash
 node run example
 ```
 
-## Run Tests
+## Run Tests - TODO
 ```bash
 npm test
 ```
