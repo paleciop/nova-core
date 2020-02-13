@@ -39,9 +39,8 @@ Context Processors are meant to be very small and lightweight. They do the least
 
 ### Anatomy of a Context Processor
 
-```javascript
+![Anatomy of a Context Processor](./docs/context-processor-anatomy.png")
 
-```
 
 ## Run example
 ```bash
