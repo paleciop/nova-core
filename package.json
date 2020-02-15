@@ -1,14 +1,14 @@
 {
-  "name": "nova-core",
+  "name": "@palecio/nova-core",
   "version": "1.0.0",
-  "description": "Small templating framework that decouples the presentation layer with the business logic. Based on XumaK's Danta specification.",
+  "description": "Small framework for creating web APIs. Based on XumaK's Danta specification.",
   "main": "index.js",
   "engines": {
     "node": ">=12.11.0",
     "npm": ">=6.11.3"
   },
   "scripts": {
-    "example": "node examples/example.js",
+    "example": "node examples/main-example",
     "test": "",
     "jsdoc": "./node_modules/.bin/jsdoc lib -r",
     "jsdoc2md": "./node_modules/.bin/jsdoc2md --files lib/*.js > doc/api.md --configure jsdoc.json"
@@ -16,6 +16,7 @@
   "keywords": [
     "nova",
     "core",
+    "danta",
     "context",
     "processor"
   ],
@@ -28,7 +29,7 @@
     "type": "git",
     "url": ""
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
