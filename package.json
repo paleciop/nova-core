@@ -1,6 +1,6 @@
 {
   "name": "@palecio/nova-core",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Small framework for creating web APIs. Based on XumaK's Danta specification.",
   "main": "index.js",
   "engines": {
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "example": "node examples/main-example",
-    "test": "",
+    "test": "riteway test/**/*.js ",
     "jsdoc": "./node_modules/.bin/jsdoc lib -r",
     "jsdoc2md": "./node_modules/.bin/jsdoc2md --files lib/*.js > doc/api.md --configure jsdoc.json"
   },
@@ -40,7 +40,8 @@
     "prettier": "^1.5.3"
   },
   "dependencies": {
-    "handlebars": "^4.3.4",
-    "klaw": "^3.0.0"
+    "handlebars": "^4.7.3",
+    "klaw": "^3.0.0",
+    "riteway": "^6.1.1"
   }
 }

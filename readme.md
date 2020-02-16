@@ -1,6 +1,6 @@
 # Nova
 
-Nova is a JavaScript framework based on XumaK's [Danta](https://github.com/DantaFramework). It provides a mechanism where the business logic is constructed as modular, granular and reusable pieces called Context Processors, has a simple and clear API which is independent from any particular technology and allows to easily test the logic either piece by piece or several pieces in conjunction.
+Nova is a JavaScript framework based on [XumaK](https://xumak.com)'s [Danta](https://github.com/DantaFramework). It provides a mechanism where the business logic is constructed as modular, granular and reusable pieces called Context Processors, has a simple and clear API which is independent from any particular technology and allows to easily test the logic either piece by piece or several pieces in conjunction.
 
 ## Motivation
 Even though XumaK's Danta solved many development problems for content management applications of the time,
@@ -52,6 +52,9 @@ Context Processors are meant to be very small and lightweight. They do the least
 ### Anatomy of a Context Processor
 
 ![Anatomy of a Context Processor](./docs/img/context-processor-anatomy.png)
+
+## Error Handling
+TODO
 
 ## Run example
 ```bash

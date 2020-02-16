@@ -9,6 +9,5 @@ module.exports = {
   fetchContextProcessorEngine,
   compileTemplate,
   contextProcessor,
-  pathAwareContextProcessor,
   errors
 };
