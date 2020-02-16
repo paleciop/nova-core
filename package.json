@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/PaleSC2/nova-core.git"
   },
   "license": "MIT",
   "devDependencies": {
