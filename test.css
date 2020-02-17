@@ -1,0 +1,48 @@
+.context-processor {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(34, 124, 113, 0.15);
+  border: 1px solid rgba(16, 124, 86, 0.2);
+  padding-left: 2px;
+  padding-right: 2px;
+    color: #4f4f4f;
+}
+
+.themed-grid-col {
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+.level {
+    margin: 5px;
+}
+
+.container-fluid.level:after {
+    content: '\2193';
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.container-fluid.level.last:after {
+    content: '';
+}
+
+.priority {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.input {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.input:after {
+    content: '\2193';
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}

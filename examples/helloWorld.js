@@ -5,10 +5,10 @@ nova
     contextProcessors: {
       name: 'HelloWorld',
       categories: 'hw',
-      process(ec, cm) {
-        cm.greeting = 'Hello World';
+      process(executionContext, contentModel) {
+        contentModel.greeting = 'Hello World';
       }
     }
   })
-  .then(cpe => cpe.execute({ categories: 'hw' }, {}))
+  .then(contextProcessorEngine => contextProcessorEngine.execute({ categories: 'hw' }, {}))
   .then(contentModel => console.log('Content Model:', contentModel));

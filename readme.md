@@ -27,12 +27,12 @@ nova
     contextProcessors: { // the context processor object, can be a single object or an array of objects
       name: 'HelloWorld',
       categories: 'hw',
-      process(ec, cm) { // this is where the context processor logic goes
-        cm.greeting = 'Hello World';
+      process(executionContext, contentModel) { // this is where the context processor logic goes
+        contentModel.greeting = 'Hello World';
       }
     }
   })
-  .then(cpe => cpe.execute({ categories: 'hw' }, {})) // the execute() method receives an execution context and an initial content model
+  .then(contextProcessorEngine => contextProcessorEngine.execute({ categories: 'hw' }, {})) // the execute() method receives an execution context and an initial content model
   .then(contentModel => console.log('Content Model:', contentModel)); // get the resulting content model
 ```
 
@@ -45,6 +45,16 @@ Context Processor will be available in all the following Context Processors and 
 set in a lower Context Processor won’t be available in Context Processors above it so the effects become incrementally granular.
 In this way, each processing level adds to the one before and creates unique variables that are available after but won’t conflict with other Context Processor scopes or its children.
 Context Processors are meant to be very small and lightweight. They do the least amount of processing needed and rely on following Context Processors to modify their result (if required) into something appropriate.
+
+### Independent CPs
+
+### Dependent CPs
+
+### Content Model
+TODO
+
+### Execution Context
+TODO
 
 ### Context Processor Flow Example
 ![Context Processor Diagram](./docs/img/NovaContextProcessorExample.jpg)
@@ -61,7 +71,7 @@ TODO
 node run example
 ```
 
-## Run Tests - TODO
+## Run Tests
 ```bash
 npm test
 ```

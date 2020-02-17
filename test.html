@@ -1,0 +1,14 @@
+<html><head><title>Test</title> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> <link rel="stylesheet" href="./test.css"/></head><body><div><p class="text-center input">input: {}</p><div class="container-fluid level  "><p class="text-center priority">priority 100</p><div class="row mb-2"><div class="col-6 themed-grid-col"><div class="context-processor text-center ">ErrorContextProcessor</div></div><div class="col-6 themed-grid-col"><div class="context-processor text-center ">FirstContextProcessor</div></div></div><p class='text-center priority'>{
+ "independentProperty": "This property was added by the Context Processor that was defined as an object",
+ "test": "1"
+}</p></div><div class="container-fluid level  "><p class="text-center priority">priority 50</p><div class="row mb-1"><div class="col-12 themed-grid-col"><div class="context-processor text-center ">SecondContextProcessor</div></div></div><p class='text-center priority'>{
+ "independentProperty": "This property was added by the Context Processor that was defined as an object",
+ "test": "12"
+}</p></div><div class="container-fluid level  "><p class="text-center priority">priority 10</p><div class="row mb-1"><div class="col-12 themed-grid-col"><div class="context-processor text-center ">ThirdContextProcessor</div></div></div><p class='text-center priority'>{
+ "independentProperty": "This property was added by the Context Processor that was defined as an object",
+ "test": "123"
+}</p></div><div class="container-fluid level last "><p class="text-center priority">priority 0</p><div class="row mb-3"><div class="col-4 themed-grid-col"><div class="context-processor text-center ">FirstAsyncContextProcessor</div></div><div class="col-4 themed-grid-col"><div class="context-processor text-center ">SecondAsyncContextProcessor</div></div><div class="col-4 themed-grid-col"><div class="context-processor text-center ">ThirdAsyncContextProcessor</div></div></div><p class='text-center priority'>{
+ "independentProperty": "This property was added by the Context Processor that was defined as an object",
+ "test": "123",
+ "asyncTest": "312"
+}</p></div></div></body></html>

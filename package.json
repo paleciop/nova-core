@@ -8,7 +8,7 @@
     "npm": ">=6.11.3"
   },
   "scripts": {
-    "example": "node examples/main-example",
+    "example": "node examples/main-example -d",
     "test": "riteway test/**/*.js ",
     "jsdoc": "./node_modules/.bin/jsdoc lib -r",
     "jsdoc2md": "./node_modules/.bin/jsdoc2md --files lib/*.js > doc/api.md --configure jsdoc.json"
