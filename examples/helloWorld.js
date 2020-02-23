@@ -10,5 +10,7 @@ nova
       }
     }
   })
-  .then(contextProcessorEngine => contextProcessorEngine.execute({ categories: 'hw' }, {}))
+  .then(contextProcessorEngine =>
+    contextProcessorEngine.execute({ categories: 'hw' }, {})
+  )
   .then(contentModel => console.log('Content Model:', contentModel));

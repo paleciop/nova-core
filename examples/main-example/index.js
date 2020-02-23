@@ -39,6 +39,14 @@ const nova = require('../..'); // Require the Nova framework
     executionContext,
     initialContentModel
   );
+
+  if (contentModel.debug) {
+    //Output the visual representation to an HTML file
+    require('fs').writeFileSync(
+      __dirname + '/debug.html',
+      contentModel.debug.visualRepresentation
+    );
+  }
   // Log the results.
   console.log('Final Content Model:', JSON.stringify(contentModel, null, 2));
 })();
