@@ -13,7 +13,7 @@ Some of the improvements Nova has over Danta are:
 
 ## Install
 
-```javascript
+```bash
 npm install @palecio/nova-core
 ```
 
@@ -46,15 +46,22 @@ set in a lower Context Processor won’t be available in Context Processors abov
 In this way, each processing level adds to the one before and creates unique variables that are available after but won’t conflict with other Context Processor scopes or its children.
 Context Processors are meant to be very small and lightweight. They do the least amount of processing needed and rely on following Context Processors to modify their result (if required) into something appropriate.
 
-### Independent CPs
+Context Processors can be dependent or independent. The difference between them, as their name suggests, is that dependent Context Processors depend 
+on the result of other Context Processors while the independent ones don't.
 
-### Dependent CPs
+To create a dependent Context Processor, just add a 'priority' property to it. To create an independent Context Processor, 
+just omit the 'priority' property. 
 
 ### Content Model
-TODO
+The Content Model is the object that Context Processors modify when they're executed. Context Processors can add, modify or delete its data. 
+It's divided in "Context", which are key value pairs used to group related data. For example, a Content Model can have a context to store the program 
+config, another context to store user related data and another one to store the page's content.
+
+Nova Core's Content Model implementation is just a plain JavaScript object that gets passed through all of the accepted Context Processors.
 
 ### Execution Context
-TODO
+A JavaScript object that contains data related to the program's execution. For example, the categories to run or in more complex implementations,
+the request object. Developers can add data to the Execution Context as needed.
 
 ### Context Processor Flow Example
 ![Context Processor Diagram](./docs/img/NovaContextProcessorExample.jpg)
@@ -64,16 +71,19 @@ TODO
 ![Anatomy of a Context Processor](./docs/img/context-processor-anatomy.png)
 
 ## Error Handling
-TODO
+Nova has two types of errors: Fatal and Non Fatal. Fatal errors stop the program execution and throw a JavaScript error. Non Fatal errors just 
+log the error to the console and continue the program execution.
 
-## Run example
-```bash
-node run example
-```
+Fatal Context processors are useful when there's an error on a Context Processor which writes properties to the Content Model that are used by other 
+Context Processors.
 
-## Run Tests
-```bash
-npm test
-```
+## Development Best Practices
+- Context Processors should be small. Each Context Processor should do one thing and complex logic should be built using a set of Context Processors.
+- Context Processors should be generic, so they can be re-used.
+- Context Processors should have a 'name' property to make debugging easier.
+- The naming convention for Context Processors is: verb + noun that describe their use. E.g. addImages, getUserID, removeConfiguration.
+- Even though the platform allows the use of literal objects as Context Processors, it's recommended that the project's Context Processors are stored on a separate folder, each in its own file; using CommonJS 
+modules to export them and the 'require()' function to import them.
+
 ---
 **Author: Pablo Alecio (paleciop@gmail.com)**
