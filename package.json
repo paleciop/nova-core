@@ -28,6 +28,9 @@
     "url": "https://github.com/PaleSC2/nova-core.git"
   },
   "license": "MIT",
+  "prettier": {
+    "singleQuote": true
+  },
   "devDependencies": {
     "prettier": "^1.5.3"
   },
