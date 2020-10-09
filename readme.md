@@ -86,4 +86,4 @@ Context Processors.
 modules to export them and the 'require()' function to import them.
 
 ---
-**Author: Pablo Alecio (paleciop@gmail.com)**
+**Author: Pablo Alecio (pablo.alecio.gg@gmail.com)**
